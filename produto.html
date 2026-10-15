@@ -149,19 +149,19 @@
                     <span id="productBadge" class="absolute top-4 left-4 bg-pink-500 text-white font-fredoka text-xs font-bold px-3 py-1.5 rounded-full shadow-md z-10 uppercase">
                         EDITION 2026
                     </span>
-                    <img id="mainImage" src="images/squishy-box.png" alt="Squishy Box" class="max-h-[420px] object-contain transition-all duration-300 hover:scale-105" />
+                    <img id="mainImage" src="images/box-24-dumplings.jpg" alt="Squishy Box" class="max-h-[420px] object-contain transition-all duration-300 hover:scale-105" />
                 </div>
 
                 <!-- Miniaturas das Imagens -->
                 <div class="grid grid-cols-3 gap-3">
-                    <button onclick="changeImage('images/squishy-box.png')" class="trust-card p-2 rounded-2xl hover:border-pink-500 focus:border-pink-500 border-2 transition">
-                        <img src="images/squishy-box.png" alt="Vista Principal" class="h-20 w-full object-contain mx-auto" />
+                    <button onclick="changeImage('images/box-24-dumplings.jpg')" class="trust-card p-2 rounded-2xl hover:border-pink-500 focus:border-pink-500 border-2 transition">
+                        <img src="images/box-24-dumplings.jpg" alt="Vista Principal" class="h-20 w-full object-contain mx-auto" />
                     </button>
-                    <button onclick="changeImage('images/squishy-box-blue.jpg')" class="trust-card p-2 rounded-2xl hover:border-pink-500 focus:border-pink-500 border-2 transition">
-                        <img src="images/squishy-box-blue.jpg" alt="Detalhe do Produto" class="h-20 w-full object-contain mx-auto rounded-lg" />
+                    <button onclick="changeImage('images/combo-festas.jpg')" class="trust-card p-2 rounded-2xl hover:border-pink-500 focus:border-pink-500 border-2 transition">
+                        <img src="images/combo-festas.jpg" alt="Detalhe do Produto" class="h-20 w-full object-contain mx-auto rounded-lg" />
                     </button>
-                    <button onclick="changeImage('images/squishy-box-gold.jpg')" class="trust-card p-2 rounded-2xl hover:border-pink-500 focus:border-pink-500 border-2 transition">
-                        <img src="images/squishy-box-gold.jpg" alt="Embalagem e Kit" class="h-20 w-full object-contain mx-auto rounded-lg" />
+                    <button onclick="changeImage('images/master-collector.jpg')" class="trust-card p-2 rounded-2xl hover:border-pink-500 focus:border-pink-500 border-2 transition">
+                        <img src="images/master-collector.jpg" alt="Embalagem e Kit" class="h-20 w-full object-contain mx-auto rounded-lg" />
                     </button>
                 </div>
             </div>
@@ -376,171 +376,172 @@
 
     <!-- Banco de Dados Dinâmico dos Produtos & Mapeamento de URLs -->
     <script>
-const productsData = {
-        "box-dumplings": {
-            name: "Box com 24 Dumpling Squishies (Modelos Variados)",
-            badge: "BEST-SELLER",
-            oldPrice: "R$ 169,90",
-            price: "R$ 129,90",
-            numericPrice: 129.90,
-            reviews: "(+148 avaliações de clientes)",
-            link: "https://seguro.squishybox.com.br/r/HRRPI7CTSG",
-            image: "images/box-24-dumplings.jpg",
-            inclusions: [
-                "🥟 24x Mini Squishies no formato de dumpling / baozi com expressões variadas",
-                "✨ Material com toque ultra suave e aveludado de silicone TPR atóxico",
-                "🎁 Caixa colecionável e presenteável lacrada de fábrica",
-                "🧼 Totalmente lavável com água e sabão neutro"
-            ]
-        },
-        "box-halloween": {
-            name: "Box Halloween - Kit com 13 Peças Temáticas",
-            badge: "EDIÇÃO LIMITADA",
-            oldPrice: "R$ 169,90",
-            price: "R$ 129,90",
-            numericPrice: 129.90,
-            reviews: "(+86 avaliações de clientes)",
-            link: "https://seguro.squishybox.com.br/r/HRRPI7CTSG",
-            image: "images/box-halloween.jpg",
-            inclusions: [
-                "🎃 13x Squishies decorativos temáticos de Halloween (Abóboras, Fantasmas, Morcegos, etc.)",
-                "👻 Cores vibrantes e design exclusivo para decoração e diversão",
-                "🛡️ Silicone TPR seguro, flexível e super resistente",
-                "📦 Caixa temática de edição limitada"
-            ]
-        },
-        "box-natal-1": {
-            name: "Box Natalino - Edição 1 (24 Peças Festivas)",
-            badge: "ESPECIAL DE NATAL",
-            oldPrice: "R$ 169,90",
-            price: "R$ 129,90",
-            numericPrice: 129.90,
-            reviews: "(+94 avaliações de clientes)",
-            link: "https://seguro.squishybox.com.br/r/HRRPI7CTSG",
-            image: "images/box-natal-1.jpg",
-            inclusions: [
-                "🎄 24x Mini squishies com temas natalinos (Pai Natal, Boneco de Neve, Árvores, etc.)",
-                "🎁 Ideal para presentear, decorar a árvore de Natal ou colecionar",
-                "✨ Toque extremamente relaxante para alívio do estresse",
-                "🚚 Frete Grátis com envio rápido para todo o Brasil"
-            ]
-        },
-        "box-natal-2": {
-            name: "Box Natalino - Edição 2 (24 Peças Festivas)",
-            badge: "ESPECIAL DE NATAL",
-            oldPrice: "R$ 169,90",
-            price: "R$ 129,90",
-            numericPrice: 129.90,
-            reviews: "(+72 avaliações de clientes)",
-            link: "https://seguro.squishybox.com.br/r/HRRPI7CTSG",
-            image: "images/box-natal-2.jpg",
-            inclusions: [
-                "🎅 24x Figuras natalinas com seleção alternativa de modelos (Sem repetições com a Edição 1)",
-                "⭐ Modelos exclusivos para completar a coleção de fim de ano",
-                "🧼 Silicone atóxico, resistente e lavável",
-                "📦 Embalagem festiva pronta para presente"
-            ]
-        },
-        "box-mystery": {
-            name: "Box Mystery Dumpling - 24 Peças Surpresa",
-            badge: "MISTÉRIO SURPRESA",
-            oldPrice: "R$ 169,90",
-            price: "R$ 129,90",
-            numericPrice: 129.90,
-            reviews: "(+110 avaliações de clientes)",
-            link: "https://seguro.squishybox.com.br/r/HRRPI7CTSG",
-            image: "images/box-mystery.jpg",
-            inclusions: [
-                "❓ 24x Embalagens misteriosas individuais com Dumpling Squishies sortidos",
-                "🎉 A melhor experiência de unboxing e colecionáveis surpresa",
-                "✨ Personagens raros e expressões divertidas para descobrir",
-                "🎁 Perfeito para brincadeiras e lembrancinhas de festas"
-            ]
-        },
-        "combo-festas": {
-            name: "Combo Festas (Box Halloween + Box Natalino)",
-            badge: "ECONOMIZE R$ 29,90!",
-            oldPrice: "De R$ 259,80",
-            price: "Por R$ 229,90",
-            numericPrice: 229.90,
-            reviews: "(+165 avaliações de clientes)",
-            link: "https://seguro.squishybox.com.br/r/21MYIHTPSL",
-            image: "images/combo-festas.jpg",
-            inclusions: [
-                "🎃 1x Box Halloween Completo (13 Peças Temáticas)",
-                "🎄 1x Box Natalino Completo (24 Peças Festivas)",
-                "💰 Desconto especial direto de R$ 29,90 em relação ao valor avulso",
-                "🚚 Frete Grátis Prioritário para todo o Brasil"
-            ]
-        },
-        "master-collector": {
-            name: "Kit Master Collector (3 Boxes à sua Escolha)",
-            badge: "MELHOR OFERTA + FRETE GRÁTIS",
-            oldPrice: "De R$ 389,70",
-            price: "Por R$ 329,90",
-            numericPrice: 329.90,
-            reviews: "(+210 avaliações de clientes)",
-            link: "https://seguro.squishybox.com.br/r/DXW09KNOX5",
-            image: "images/master-collector.jpg",
-            inclusions: [
-                "🎁 3x Boxes Completas à sua escolha (Dumplings, Halloween, Natal ou Mystery)",
-                "🔥 Economia máxima de R$ 59,80 no combo",
-                "✨ O presente definitivo de fim de ano para toda a família",
-                "🚀 Frete Grátis Express com prioridade de envio"
-            ]
+        const productsData = {
+            "box-dumplings": {
+                name: "Box com 24 Dumpling Squishies (Modelos Variados)",
+                badge: "BEST-SELLER",
+                oldPrice: "R$ 169,90",
+                price: "R$ 129,90",
+                numericPrice: 129.90,
+                reviews: "(+148 avaliações de clientes)",
+                link: "https://seguro.squishybox.com.br/r/HRRPI7CTSG",
+                image: "images/box-24-dumplings.jpg",
+                inclusions: [
+                    "🥟 24x Mini Squishies no formato de dumpling / baozi com expressões variadas",
+                    "✨ Material com toque ultra suave e aveludado de silicone TPR atóxico",
+                    "🎁 Caixa colecionável e presenteável lacrada de fábrica",
+                    "🧼 Totalmente lavável com água e sabão neutro"
+                ]
+            },
+            "box-halloween": {
+                name: "Box Halloween - Kit com 13 Peças Temáticas",
+                badge: "EDIÇÃO LIMITADA",
+                oldPrice: "R$ 169,90",
+                price: "R$ 129,90",
+                numericPrice: 129.90,
+                reviews: "(+86 avaliações de clientes)",
+                link: "https://seguro.squishybox.com.br/r/HRRPI7CTSG",
+                image: "images/box-halloween.jpg",
+                inclusions: [
+                    "🎃 13x Squishies decorativos temáticos de Halloween (Abóboras, Fantasmas, Morcegos, etc.)",
+                    "👻 Cores vibrantes e design exclusivo para decoração e diversão",
+                    "🛡️ Silicone TPR seguro, flexível e super resistente",
+                    "📦 Caixa temática de edição limitada"
+                ]
+            },
+            "box-natal-1": {
+                name: "Box Natalino - Edição 1 (24 Peças Festivas)",
+                badge: "ESPECIAL DE NATAL",
+                oldPrice: "R$ 169,90",
+                price: "R$ 129,90",
+                numericPrice: 129.90,
+                reviews: "(+94 avaliações de clientes)",
+                link: "https://seguro.squishybox.com.br/r/HRRPI7CTSG",
+                image: "images/box-natal-1.jpg",
+                inclusions: [
+                    "🎄 24x Mini squishies com temas natalinos (Pai Natal, Boneco de Neve, Árvores, etc.)",
+                    "🎁 Ideal para presentear, decorar a árvore de Natal ou colecionar",
+                    "✨ Toque extremamente relaxante para alívio do estresse",
+                    "🚚 Frete Grátis com envio rápido para todo o Brasil"
+                ]
+            },
+            "box-natal-2": {
+                name: "Box Natalino - Edição 2 (24 Peças Festivas)",
+                badge: "ESPECIAL DE NATAL",
+                oldPrice: "R$ 169,90",
+                price: "R$ 129,90",
+                numericPrice: 129.90,
+                reviews: "(+72 avaliações de clientes)",
+                link: "https://seguro.squishybox.com.br/r/HRRPI7CTSG",
+                image: "images/box-natal-2.jpg",
+                inclusions: [
+                    "🎅 24x Figuras natalinas com seleção alternativa de modelos (Sem repetições com a Edição 1)",
+                    "⭐ Modelos exclusivos para completar a coleção de fim de ano",
+                    "🧼 Silicone atóxico, resistente e lavável",
+                    "📦 Embalagem festiva pronta para presente"
+                ]
+            },
+            "box-mystery": {
+                name: "Box Mystery Dumpling - 24 Peças Surpresa",
+                badge: "MISTÉRIO SURPRESA",
+                oldPrice: "R$ 169,90",
+                price: "R$ 129,90",
+                numericPrice: 129.90,
+                reviews: "(+110 avaliações de clientes)",
+                link: "https://seguro.squishybox.com.br/r/HRRPI7CTSG",
+                image: "images/box-mystery.jpg",
+                inclusions: [
+                    "❓ 24x Embalagens misteriosas individuais com Dumpling Squishies sortidos",
+                    "🎉 A melhor experiência de unboxing e colecionáveis surpresa",
+                    "✨ Personagens raros e expressões divertidas para descobrir",
+                    "🎁 Perfeito para brincadeiras e lembrancinhas de festas"
+                ]
+            },
+            "combo-festas": {
+                name: "Combo Festas (Box Halloween + Box Natalino)",
+                badge: "ECONOMIZE R$ 29,90!",
+                oldPrice: "De R$ 259,80",
+                price: "Por R$ 229,90",
+                numericPrice: 229.90,
+                reviews: "(+165 avaliações de clientes)",
+                link: "https://seguro.squishybox.com.br/r/21MYIHTPSL",
+                image: "images/combo-festas.jpg",
+                inclusions: [
+                    "🎃 1x Box Halloween Completo (13 Peças Temáticas)",
+                    "🎄 1x Box Natalino Completo (24 Peças Festivas)",
+                    "💰 Desconto especial direto de R$ 29,90 em relação ao valor avulso",
+                    "🚚 Frete Grátis Prioritário para todo o Brasil"
+                ]
+            },
+            "master-collector": {
+                name: "Kit Master Collector (3 Boxes à sua Escolha)",
+                badge: "MELHOR OFERTA + FRETE GRÁTIS",
+                oldPrice: "De R$ 389,70",
+                price: "Por R$ 329,90",
+                numericPrice: 329.90,
+                reviews: "(+210 avaliações de clientes)",
+                link: "https://seguro.squishybox.com.br/r/DXW09KNOX5",
+                image: "images/master-collector.jpg",
+                inclusions: [
+                    "🎁 3x Boxes Completas à sua escolha (Dumplings, Halloween, Natal ou Mystery)",
+                    "🔥 Economia máxima de R$ 59,80 no combo",
+                    "✨ O presente definitivo de fim de ano para toda a família",
+                    "🚀 Frete Grátis Express com prioridade de envio"
+                ]
+            }
+        };
+
+        let currentProduct = null;
+
+        function loadProductData() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id') || 'box-dumplings';
+
+            // Carrega o produto ou usa 'box-dumplings' como fallback
+            currentProduct = productsData[productId] || productsData["box-dumplings"];
+
+            document.title = `${currentProduct.name} | Squishy Box Brasil`;
+            document.getElementById('breadcrumbTitle').innerText = currentProduct.name;
+            document.getElementById('productTitle').innerText = currentProduct.name;
+            document.getElementById('productBadge').innerText = currentProduct.badge;
+            
+            const oldPriceEl = document.getElementById('productOldPrice');
+            if (currentProduct.oldPrice) {
+                oldPriceEl.innerText = currentProduct.oldPrice;
+                oldPriceEl.style.display = 'inline';
+            } else {
+                oldPriceEl.style.display = 'none';
+            }
+
+            document.getElementById('productPrice').innerText = currentProduct.price;
+            document.getElementById('productReviews').innerText = currentProduct.reviews;
+            document.getElementById('mainImage').src = currentProduct.image;
+            document.getElementById('checkoutBtn').href = currentProduct.link;
+
+            const listEl = document.getElementById('productInclusions');
+            listEl.innerHTML = currentProduct.inclusions.map(item => `<li>${item}</li>`).join('');
+
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'ViewContent', {
+                    content_name: currentProduct.name,
+                    value: currentProduct.numericPrice,
+                    currency: 'BRL'
+                });
+            }
         }
-    };
 
-    let currentProduct = null;
-
-    function loadProductData() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const productId = urlParams.get('id') || 'box-dumplings';
-
-        currentProduct = productsData[productId] || productsData["box-dumplings"];
-
-        document.title = `${currentProduct.name} | Squishy Box Brasil`;
-        document.getElementById('breadcrumbTitle').innerText = currentProduct.name;
-        document.getElementById('productTitle').innerText = currentProduct.name;
-        document.getElementById('productBadge').innerText = currentProduct.badge;
-        
-        const oldPriceEl = document.getElementById('productOldPrice');
-        if (currentProduct.oldPrice) {
-            oldPriceEl.innerText = currentProduct.oldPrice;
-            oldPriceEl.style.display = 'inline';
-        } else {
-            oldPriceEl.style.display = 'none';
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
         }
 
-        document.getElementById('productPrice').innerText = currentProduct.price;
-        document.getElementById('productReviews').innerText = currentProduct.reviews;
-        document.getElementById('mainImage').src = currentProduct.image;
-        document.getElementById('checkoutBtn').href = currentProduct.link;
-
-        const listEl = document.getElementById('productInclusions');
-        listEl.innerHTML = currentProduct.inclusions.map(item => `<li>${item}</li>`).join('');
-
-        if (typeof fbq !== 'undefined') {
-            fbq('track', 'ViewContent', {
-                content_name: currentProduct.name,
-                value: currentProduct.numericPrice,
-                currency: 'BRL'
-            });
+        function executeCheckout() {
+            if (currentProduct) {
+                trackCheckout(currentProduct.name, currentProduct.numericPrice);
+            }
         }
-    }
 
-    function changeImage(src) {
-        document.getElementById('mainImage').src = src;
-    }
-
-    function executeCheckout() {
-        if (currentProduct) {
-            trackCheckout(currentProduct.name, currentProduct.numericPrice);
-        }
-    }
-
-    window.onload = loadProductData;
-</script>
+        window.onload = loadProductData;
+    </script>
 
 </body>
 </html>
