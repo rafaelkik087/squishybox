@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squishy Box Brasil | Loja Oficial</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Fredoka -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        
+        var FB_PIXEL_ID = '2130976651176663'; 
+        fbq('init', FB_PIXEL_ID);
+        fbq('track', 'PageView');
+
+        function trackCheckout(packageName, priceValue) {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'InitiateCheckout', {
+                    content_name: packageName,
+                    value: priceValue,
+                    currency: 'BRL'
+                });
+            }
+        }
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=2130976651176663&ev=PageView&noscript=1"/>
+    </noscript>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Fredoka', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            pink: '#FF5C93',
+                            pinkLight: '#FFF0F5',
+                            purple: '#8B5CF6',
+                            purpleDark: '#6D28D9',
+                            yellow: '#FFD166',
+                            green: '#06D6A0',
+                            dark: '#0F172A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .font-fredoka { font-family: 'Fredoka', sans-serif; }
+        .gradient-header {
+            background: linear-gradient(90deg, #FF5C93 0%, #8B5CF6 100%);
+        }
+        .gradient-button {
+            background: linear-gradient(90deg, #FF5C93 0%, #FF835C 100%);
+            box-shadow: 0 10px 25px -5px rgba(255, 92, 147, 0.4);
+            transition: all 0.3s ease;
+        }
+        .gradient-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(255, 92, 147, 0.6);
+        }
+        .trust-card {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-pink-200">
+
+    <!-- Top Announcement Bar -->
+    <div class="gradient-header text-white text-xs sm:text-sm font-semibold py-2 px-4 text-center shadow-sm">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="hidden md:flex items-center space-x-2 text-xs">
+                <i class="fa-solid fa-lock text-emerald-300"></i>
+                <span>COMPRA SEGURA & CRIPTOGRAFADA</span>
+            </div>
+            <div class="mx-auto md:mx-0 flex items-center space-x-2">
+                <i class="fa-solid fa-truck-fast"></i>
+                <span>FRETE GRÁTIS PARA TODO O BRASIL</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-2 text-xs">
+                <i class="fa-solid fa-clock"></i>
+                <span>DESPACHO EM 24H</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Principal -->
+    <header class="bg-white sticky top-0 z-50 border-b border-slate-100 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center text-white font-fredoka text-xl font-bold shadow-md">
+                    ✨
+                </div>
+                <div>
+                    <span class="font-fredoka text-2xl font-bold text-slate-900 tracking-tight">Squishy Box</span>
+                    <span class="block text-[10px] font-extrabold tracking-widest text-pink-500 uppercase -mt-1">Loja Oficial</span>
+                </div>
+            </a>
+
+            <a href="index.html#produtos" class="text-xs sm:text-sm font-bold text-slate-600 hover:text-pink-500 flex items-center space-x-1">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Voltar para a Loja</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="max-w-6xl mx-auto px-4 py-3 text-xs text-slate-500 flex items-center space-x-2">
+        <a href="index.html" class="hover:underline">Início</a>
+        <span>/</span>
+        <a href="index.html#produtos" class="hover:underline">Coleções</a>
+        <span>/</span>
+        <span id="breadcrumbTitle" class="text-slate-900 font-semibold">Carregando produto...</span>
+    </div>
+
+    <!-- Seção Principal do Produto -->
+    <section class="pb-16 pt-2 bg-white border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-10">
+            
+            <!-- Coluna Esquerda: Galeria de Imagens -->
+            <div class="lg:col-span-7 space-y-4">
+                <div class="trust-card p-4 rounded-3xl relative overflow-hidden bg-gradient-to-b from-slate-50 to-pink-50/30 flex items-center justify-center min-h-[380px] sm:min-h-[480px]">
+                    <span id="productBadge" class="absolute top-4 left-4 bg-pink-500 text-white font-fredoka text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">
+                        EDITION 2026
+                    </span>
+                    <img id="mainImage" src="/images/squishy-box.png" alt="Squishy Box" class="max-h-[420px] object-contain transition-all duration-300 hover:scale-105" />
+                </div>
+
+                <!-- Miniaturas das Imagens -->
+                <div class="grid grid-cols-3 gap-3">
+                    <button onclick="changeImage('/images/squishy-box.png')" class="trust-card p-2 rounded-2xl hover:border-pink-500 focus:border-pink-500 border-2 transition">
+                        <img src="/images/squishy-box.png" alt="Caixa Original" class="h-20 w-full object-contain mx-auto" />
+                    </button>
+                    <button onclick="changeImage('/images/squishy-box-blue.jpg')" class="trust-card p-2 rounded-2xl hover:border-pink-500 focus:border-pink-500 border-2 transition">
+                        <img src="/images/squishy-box-blue.jpg" alt="Fun Box Azul" class="h-20 w-full object-contain mx-auto rounded-lg" />
+                    </button>
+                    <button onclick="changeImage('/images/squishy-box-gold.jpg')" class="trust-card p-2 rounded-2xl hover:border-pink-500 focus:border-pink-500 border-2 transition">
+                        <img src="/images/squishy-box-gold.jpg" alt="Fun Box Dourada" class="h-20 w-full object-contain mx-auto rounded-lg" />
+                    </button>
+                </div>
+            </div>
+
+            <!-- Coluna Direita: Detalhes do Produto Selecionado -->
+            <div class="lg:col-span-5 space-y-6">
+                
+                <div class="space-y-2">
+                    <div class="flex items-center space-x-2 text-xs font-bold text-emerald-600">
+                        <span class="flex h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+                        <span>Em estoque • Envio imediato</span>
+                    </div>
+
+                    <h1 id="productTitle" class="font-fredoka text-2xl sm:text-3xl font-bold text-slate-900 leading-tight">
+                        Squishy Box - Edição Sweet Treat
+                    </h1>
+
+                    <a href="#avaliacoes-produto" class="flex items-center space-x-2 text-xs hover:opacity-80 transition">
+                        <div class="flex text-amber-400">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="font-bold text-slate-900">4.9</span>
+                        <span id="productReviews" class="text-pink-600 font-semibold underline">(+120 avaliações de clientes)</span>
+                    </a>
+                </div>
+
+                <!-- Preço -->
+                <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 space-y-2">
+                    <div class="flex items-baseline space-x-2">
+                        <span id="productOldPrice" class="text-xs text-slate-400 line-through">R$ 129,90</span>
+                        <span id="productPrice" class="font-fredoka text-4xl font-bold text-pink-600">R$ 89,90</span>
+                    </div>
+                    <p class="text-xs text-emerald-600 font-bold"><i class="fa-solid fa-bolt mr-1"></i> Desconto automático no PIX com aprovação instantânea</p>
+                </div>
+
+                <!-- Aviso de Estoque -->
+                <div class="bg-amber-50 border border-amber-200 text-amber-800 text-xs p-3 rounded-xl flex items-center space-x-2 font-medium">
+                    <i class="fa-solid fa-triangle-exclamation text-amber-500 text-base shrink-0"></i>
+                    <span><strong>Estoque Limitado:</strong> Poucas unidades deste kit disponíveis com Frete Grátis.</span>
+                </div>
+
+                <!-- Botão de Checkout Final -->
+                <div class="space-y-3 pt-2">
+                    <a id="checkoutBtn" 
+                       href="#" 
+                       onclick="executeCheckout()"
+                       class="w-full gradient-button text-white font-fredoka py-4 px-6 rounded-2xl text-center font-bold text-lg block transition shadow-lg">
+                        <i class="fa-solid fa-lock mr-2"></i> IR PARA O CHECKOUT SEGURO
+                    </a>
+                    
+                    <p class="text-[11px] text-center text-slate-400 flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-shield-check text-emerald-500"></i>
+                        <span>Pagamento via PIX ou Cartão em até 12x</span>
+                    </p>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="grid grid-cols-3 gap-2 pt-2 border-t border-slate-100 text-[11px] text-slate-600 font-semibold text-center">
+                    <div class="p-2 bg-slate-50 rounded-xl">
+                        <i class="fa-solid fa-truck-fast text-pink-500 text-base block mb-1"></i>
+                        <span>Frete Grátis Brasil</span>
+                    </div>
+                    <div class="p-2 bg-slate-50 rounded-xl">
+                        <i class="fa-solid fa-shield-halved text-purple-500 text-base block mb-1"></i>
+                        <span>7 Dias Garantia</span>
+                    </div>
+                    <div class="p-2 bg-slate-50 rounded-xl">
+                        <i class="fa-solid fa-box-open text-emerald-500 text-base block mb-1"></i>
+                        <span>Caixa Lacrada</span>
+                    </div>
+                </div>
+
+                <!-- Informações do Produto -->
+                <div class="space-y-3 pt-4 border-t border-slate-100">
+                    <details class="trust-card rounded-2xl p-4 [&_svg]:open:-rotate-180 cursor-pointer" open>
+                        <summary class="flex items-center justify-between font-fredoka font-bold text-slate-900 text-sm list-none">
+                            <span><i class="fa-solid fa-sparkles text-pink-500 mr-2"></i> O que acompanha o kit?</span>
+                            <svg class="w-4 h-4 transition-transform duration-300 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <ul id="productInclusions" class="mt-3 text-xs text-slate-600 space-y-1.5 border-t border-slate-100 pt-3 font-medium">
+                            <li>🧀 1x Queijo em Cubo (Textura Porosa)</li>
+                            <li>❄️ 1x Floco de Neve (Gel Transparente)</li>
+                            <li>🌊 1x Cubo Oceano (Com Brilhos e Miniaturas)</li>
+                            <li>🍞 1x Pão Macio (Aroma Delicado)</li>
+                            <li>🍎 1x Maçã Brilhante (Glitter Cristal)</li>
+                            <li>🐾 1x Pata de Gato Pérola (Toque Perolado)</li>
+                            <li>🍓 1x Morango Suculento (Textura Real)</li>
+                            <li>🧈 1x Barra de Manteiga (Super Macia)</li>
+                        </ul>
+                    </details>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Seção de Avaliações do Produto (Estilo Miniko) -->
+    <section id="avaliacoes-produto" class="py-16 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 space-y-10">
+            
+            <!-- Header das Avaliações com Resumo -->
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-xs">
+                <div class="space-y-2">
+                    <span class="text-pink-600 font-fredoka text-xs font-bold uppercase tracking-wider">Opinião de quem comprou</span>
+                    <h2 class="font-fredoka text-2xl sm:text-3xl font-bold text-slate-900">Avaliações dos Clientes</h2>
+                    <p class="text-xs text-slate-500">Média baseada em compras verificadas no site oficial</p>
+                </div>
+
+                <div class="flex items-center space-x-4 border-t md:border-t-0 md:border-l border-slate-100 pt-4 md:pt-0 md:pl-8">
+                    <div class="text-center">
+                        <span class="font-fredoka text-4xl sm:text-5xl font-bold text-slate-900 block">4.9</span>
+                        <div class="flex text-amber-400 text-xs my-1 justify-center">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-[11px] text-slate-400 font-medium">de 5.0 estrelas</span>
+                    </div>
+
+                    <div class="space-y-1 text-xs text-slate-500 border-l border-slate-100 pl-4">
+                        <div class="flex items-center space-x-2">
+                            <span>5 ★</span>
+                            <div class="w-24 bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-amber-400 h-full w-[94%]"></div>
+                            </div>
+                            <span>94%</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span>4 ★</span>
+                            <div class="w-24 bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-amber-400 h-full w-[6%]"></div>
+                            </div>
+                            <span>6%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lista de Depoimentos Individuais -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="trust-card p-6 rounded-2xl space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex text-amber-400 text-xs space-x-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-[10px] text-slate-400 font-medium">Há 2 dias</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
+                        "Comprei o kit e fiquei impressionada com a qualidade! O squishy de manteiga é super macio e o cheiro de pão é muito gostoso. Minha filha de 8 anos não larga mais!"
+                    </p>
+                    <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-7 h-7 rounded-full bg-pink-100 text-pink-600 font-bold flex items-center justify-center text-xs">P</div>
+                            <span class="font-bold text-slate-900">Patricia S.</span>
+                        </div>
+                        <span class="text-emerald-600 font-bold text-[11px]"><i class="fa-solid fa-circle-check"></i> Compra Verificada</span>
+                    </div>
+                </div>
+
+                <div class="trust-card p-6 rounded-2xl space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex text-amber-400 text-xs space-x-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-[10px] text-slate-400 font-medium">Há 5 dias</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
+                        "Chegou super rápido aqui em Belo Horizonte, apenas 4 dias. A caixa veio bem lacrada e todos os 8 itens vieram perfeitamente. O de gel com glitter é lindo demais!"
+                    </p>
+                    <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-7 h-7 rounded-full bg-purple-100 text-purple-600 font-bold flex items-center justify-center text-xs">R</div>
+                            <span class="font-bold text-slate-900">Renata M.</span>
+                        </div>
+                        <span class="text-emerald-600 font-bold text-[11px]"><i class="fa-solid fa-circle-check"></i> Compra Verificada</span>
+                    </div>
+                </div>
+
+                <div class="trust-card p-6 rounded-2xl space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex text-amber-400 text-xs space-x-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-[10px] text-slate-400 font-medium">Há 1 semana</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
+                        "Excelente produto para aliviar o estresse no trabalho. Deixo um na mesa do escritório e o toque é muito gostoso. Vale cada centavo!"
+                    </p>
+                    <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-7 h-7 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-xs">F</div>
+                            <span class="font-bold text-slate-900">Felipe A.</span>
+                        </div>
+                        <span class="text-emerald-600 font-bold text-[11px]"><i class="fa-solid fa-circle-check"></i> Compra Verificada</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 text-xs">
+        <div class="max-w-6xl mx-auto px-4 text-center space-y-4">
+            <div class="flex items-center justify-center space-x-2">
+                <div class="w-7 h-7 rounded-lg bg-pink-500 flex items-center justify-center text-white font-bold">✨</div>
+                <span class="font-fredoka text-lg text-white font-bold">Squishy Box Brasil</span>
+            </div>
+            <p>© 2026 Squishy Box Brasil. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Lógica JavaScript Dinâmica -->
+    <script>
+        const productsData = {
+            "1": {
+                name: "1x Squishy Box - Edição Sweet Treat",
+                badge: "EDITION 2026",
+                oldPrice: "R$ 129,90",
+                price: "R$ 89,90",
+                numericPrice: 89.90,
+                reviews: "(+48 avaliações de clientes)",
+                link: "https://seguro.squishybox.com.br/r/HRRPI7CTSG",
+                image: "/images/squishy-box.png",
+                inclusions: [
+                    "🧀 1x Queijo em Cubo", "❄️ 1x Floco de Neve", "🌊 1x Cubo Oceano", 
+                    "🍞 1x Pão Macio", "🍎 1x Maçã Brilhante", "🐾 1x Pata de Gato Pérola", 
+                    "🍓 1x Morango Suculento", "🧈 1x Barra de Manteiga"
+                ]
+            },
+            "2": {
+                name: "Combo Duplo (16 Itens + Brinde Dumpling)",
+                badge: "⭐ CAMPEÃO DE VENDAS",
+                oldPrice: "R$ 259,80",
+                price: "R$ 139,90",
+                numericPrice: 139.90,
+                reviews: "(+112 avaliações de clientes)",
+                link: "https://seguro.squishybox.com.br/r/21MYIHTPSL",
+                image: "/images/squishy-box.png",
+                inclusions: [
+                    "🎁 2x Caixas Completas Sweet Treat (16 Squishies)",
+                    "⭐ BRINDE EXCLUSIVO: 1x Squishy Dumpling",
+                    "🚚 Frete Grátis Prioritário para todo o Brasil"
+                ]
+            },
+            "3": {
+                name: "Combo Mega Coleção (24 Itens + 2 Brindes)",
+                badge: "ECONOMIA MÁXIMA",
+                oldPrice: "R$ 389,70",
+                price: "R$ 189,90",
+                numericPrice: 189.90,
+                reviews: "(+64 avaliações de clientes)",
+                link: "https://seguro.squishybox.com.br/r/DXW09KNOX5",
+                image: "/images/squishy-box.png",
+                inclusions: [
+                    "🎁 3x Caixas Completas Sweet Treat (24 Squishies)",
+                    "⭐ 2 BRINDES EXCLUSIVOS: Dumpling + Halloween",
+                    "🚚 Frete Grátis Express para todo o Brasil"
+                ]
+            }
+        };
+
+        let currentProduct = null;
+
+        function loadProductData() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id') || '2';
+
+            currentProduct = productsData[productId] || productsData["2"];
+
+            document.title = `${currentProduct.name} | Squishy Box Brasil`;
+            document.getElementById('breadcrumbTitle').innerText = currentProduct.name;
+            document.getElementById('productTitle').innerText = currentProduct.name;
+            document.getElementById('productBadge').innerText = currentProduct.badge;
+            document.getElementById('productOldPrice').innerText = currentProduct.oldPrice;
+            document.getElementById('productPrice').innerText = currentProduct.price;
+            document.getElementById('productReviews').innerText = currentProduct.reviews;
+            document.getElementById('mainImage').src = currentProduct.image;
+            document.getElementById('checkoutBtn').href = currentProduct.link;
+
+            const listEl = document.getElementById('productInclusions');
+            listEl.innerHTML = currentProduct.inclusions.map(item => `<li>${item}</li>`).join('');
+
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'ViewContent', {
+                    content_name: currentProduct.name,
+                    value: currentProduct.numericPrice,
+                    currency: 'BRL'
+                });
+            }
+        }
+
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+
+        function executeCheckout() {
+            if (currentProduct) {
+                trackCheckout(currentProduct.name, currentProduct.numericPrice);
+            }
+        }
+
+        window.onload = loadProductData;
+    </script>
+
+</body>
+</html>
