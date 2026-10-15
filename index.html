@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squishy Box Brasil | Loja Oficial - Coleções de Fim de Ano & Brinquedos Sensoriais</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Fredoka -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        
+        var FB_PIXEL_ID = '2130976651176663'; 
+        fbq('init', FB_PIXEL_ID);
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=2130976651176663&ev=PageView&noscript=1"/>
+    </noscript>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Fredoka', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            pink: '#FF5C93',
+                            pinkLight: '#FFF0F5',
+                            purple: '#8B5CF6',
+                            purpleDark: '#6D28D9',
+                            yellow: '#FFD166',
+                            green: '#06D6A0',
+                            dark: '#0F172A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .font-fredoka { font-family: 'Fredoka', sans-serif; }
+        .gradient-header {
+            background: linear-gradient(90deg, #FF5C93 0%, #8B5CF6 100%);
+        }
+        .gradient-bg {
+            background: linear-gradient(180deg, #FFF0F5 0%, #F8FAFC 100%);
+        }
+        .gradient-button {
+            background: linear-gradient(90deg, #FF5C93 0%, #FF835C 100%);
+            box-shadow: 0 10px 25px -5px rgba(255, 92, 147, 0.4);
+            transition: all 0.3s ease;
+        }
+        .gradient-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(255, 92, 147, 0.6);
+        }
+        .trust-card {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-pink-200">
+
+    <!-- Top Announcement Bar -->
+    <div class="gradient-header text-white text-xs sm:text-sm font-semibold py-2 px-4 text-center shadow-sm">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="hidden md:flex items-center space-x-2 text-xs">
+                <i class="fa-solid fa-lock text-emerald-300"></i>
+                <span>SITE OFICIAL & BLINDADO</span>
+            </div>
+            <div class="mx-auto md:mx-0 flex items-center space-x-2">
+                <i class="fa-solid fa-truck-fast"></i>
+                <span>FRETE GRÁTIS PARA TODO O BRASIL • HOJE APENAS</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-2 text-xs">
+                <i class="fa-solid fa-clock"></i>
+                <span>DESPACHO EM ATÉ 24H</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Principal -->
+    <header class="bg-white sticky top-0 z-50 border-b border-slate-100 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between">
+            
+            <a href="#" class="flex items-center space-x-3">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center text-white font-fredoka text-2xl font-bold shadow-md">
+                    ✨
+                </div>
+                <div>
+                    <span class="font-fredoka text-2xl font-bold text-slate-900 tracking-tight">Squishy Box</span>
+                    <span class="block text-[10px] font-extrabold tracking-widest text-pink-500 uppercase -mt-1">Brasil • Loja Oficial</span>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                <a href="#conteudo" class="hover:text-pink-500 transition">O que vem dentro</a>
+                <a href="#kits" class="hover:text-pink-500 transition">Kits Promocionais</a>
+                <a href="#produtos" class="hover:text-pink-500 transition">Coleções Individuais</a>
+                <a href="#depoimentos" class="hover:text-pink-500 transition">Avaliações</a>
+                <a href="#faq" class="hover:text-pink-500 transition">FAQ</a>
+            </nav>
+
+            <a href="#kits" class="gradient-button text-white font-fredoka px-6 py-2.5 rounded-full text-sm font-bold flex items-center space-x-2">
+                <i class="fa-solid fa-gift"></i>
+                <span>VER KITS DE NATAL</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Banner de Notificação -->
+    <div class="bg-pink-50 border-b border-pink-100 py-2 text-center text-xs text-pink-800 font-medium">
+        <div class="max-w-6xl mx-auto px-4 flex items-center justify-center space-x-2">
+            <span class="flex h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+            <span>+1.850 caixas enviadas neste mês. Restam poucas unidades das <strong>Edições Limitadas de Fim de Ano</strong>.</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-10 lg:py-16">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <!-- Left Column: Copywriting -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                
+                <div class="inline-flex items-center space-x-2 bg-white border border-pink-200 text-pink-700 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-xs">
+                    <i class="fa-solid fa-award text-amber-400 text-base"></i>
+                    <span>Coleções Exclusivas de Fim de Ano 🎃🎄</span>
+                </div>
+
+                <h1 class="font-fredoka text-3xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
+                    O Presente Perfeito <span class="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-600 bg-clip-text text-transparent">(e Mais Relaxante)</span> do Ano Chegou!
+                </h1>
+
+                <p class="text-slate-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                    Conheça as novas edições temáticas de Halloween, Natal e Dumplings. Squishies ultra macios de alta densidade, cores vibrantes e alívio imediato do estresse.
+                </p>
+
+                <!-- Avaliação de Clientes -->
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm pt-1">
+                    <div class="flex items-center space-x-1 text-amber-400">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="font-bold text-slate-900">4.9/5.0</span>
+                    <span class="text-slate-300">|</span>
+                    <span class="text-slate-600 font-medium">+3.200 Clientes Satisfeitos</span>
+                </div>
+
+                <!-- CTA Principal -->
+                <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4">
+                    <a href="#kits" class="w-full sm:w-auto gradient-button text-white font-fredoka text-lg px-8 py-4 rounded-2xl font-bold text-center flex items-center justify-center space-x-3">
+                        <span>GARANTIR MINHA BOX</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Selos de Confiança -->
+                <div class="pt-6 grid grid-cols-3 gap-3 border-t border-slate-200 text-xs text-slate-600 font-semibold">
+                    <div class="flex items-center space-x-2 justify-center lg:justify-start">
+                        <i class="fa-solid fa-shield-check text-emerald-500 text-lg"></i>
+                        <span>Compra 100% Protegida</span>
+                    </div>
+                    <div class="flex items-center space-x-2 justify-center lg:justify-start">
+                        <i class="fa-solid fa-pix text-teal-500 text-lg"></i>
+                        <span>Aprovação Imediata</span>
+                    </div>
+                    <div class="flex items-center space-x-2 justify-center lg:justify-start">
+                        <i class="fa-solid fa-box-check text-purple-500 text-lg"></i>
+                        <span>Garantia de 7 Dias</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Card Destaque Hero -->
+            <div class="lg:col-span-5 relative">
+                <div class="relative mx-auto max-w-md lg:max-w-none">
+                    <div class="trust-card p-4 sm:p-6 rounded-3xl relative">
+                        <div class="absolute -top-3 right-6 bg-gradient-to-r from-amber-400 to-orange-400 text-slate-900 font-fredoka text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">
+                            ✨ NOVIDADES FESTIVAS
+                        </div>
+                        
+                        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-b from-slate-50 to-pink-50 p-3 flex items-center justify-center border border-pink-100">
+                            <img src="/images/squishy-box.png" 
+                                 alt="Squishy Box Coleções de Fim de Ano" 
+                                 fetchpriority="high"
+                                 loading="eager"
+                                 width="500"
+                                 height="500"
+                                 class="w-full h-auto object-contain rounded-xl hover:scale-105 transition-transform duration-500" />
+                        </div>
+
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-semibold">
+                            <span class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-1.5"></i> Silicone Atóxico</span>
+                            <span class="flex items-center"><i class="fa-solid fa-sparkles text-pink-500 mr-1.5"></i> Edição Limitada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Selos de Mídia -->
+    <section class="py-8 bg-white border-y border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Aprovado por Mães e Criadores de Conteúdo em Todo o Brasil</p>
+            <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
+                <span class="font-fredoka font-bold text-slate-700 text-lg"><i class="fa-brands fa-tiktok text-pink-500 mr-1"></i> TikTok Viral</span>
+                <span class="font-fredoka font-bold text-slate-700 text-lg"><i class="fa-brands fa-instagram text-purple-500 mr-1"></i> Instagram Reels</span>
+                <span class="font-fredoka font-bold text-slate-700 text-lg"><i class="fa-solid fa-heart text-red-500 mr-1"></i> +10M de Visualizações</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo Geral das Caixas -->
+    <section id="conteudo" class="py-16 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+                <span class="text-pink-600 font-fredoka text-sm font-bold uppercase tracking-wider">Qualidade & Sensação Premium</span>
+                <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-slate-900">
+                    Por que a Squishy Box é Incomparável?
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    Cada caixinha é lacrada de fábrica com colecionáveis desenvolvidos em Silicone TPR atóxico e lavável:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 lg:gap-6">
+                <div class="trust-card p-4 rounded-2xl text-center space-y-2 hover:shadow-lg transition">
+                    <div class="w-16 h-16 mx-auto bg-amber-100/80 rounded-2xl flex items-center justify-center text-3xl">🥟</div>
+                    <h3 class="font-fredoka font-bold text-slate-800 text-sm sm:text-base">Dumplings Clássicos</h3>
+                    <p class="text-xs text-slate-500">24 Modelos Fofos</p>
+                </div>
+                <div class="trust-card p-4 rounded-2xl text-center space-y-2 hover:shadow-lg transition">
+                    <div class="w-16 h-16 mx-auto bg-purple-100/80 rounded-2xl flex items-center justify-center text-3xl">🎃</div>
+                    <h3 class="font-fredoka font-bold text-slate-800 text-sm sm:text-base">Halloween Fun</h3>
+                    <p class="text-xs text-slate-500">13 Peças Temáticas</p>
+                </div>
+                <div class="trust-card p-4 rounded-2xl text-center space-y-2 hover:shadow-lg transition">
+                    <div class="w-16 h-16 mx-auto bg-red-100/80 rounded-2xl flex items-center justify-center text-3xl">🎄</div>
+                    <h3 class="font-fredoka font-bold text-slate-800 text-sm sm:text-base">Coleção Natalina</h3>
+                    <p class="text-xs text-slate-500">24 Figuras Festivas</p>
+                </div>
+                <div class="trust-card p-4 rounded-2xl text-center space-y-2 hover:shadow-lg transition">
+                    <div class="w-16 h-16 mx-auto bg-pink-100/80 rounded-2xl flex items-center justify-center text-3xl">🎁</div>
+                    <h3 class="font-fredoka font-bold text-slate-800 text-sm sm:text-base">Embalagens Surpresa</h3>
+                    <p class="text-xs text-slate-500">Emoção do Unboxing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE KITS COMBO (Leve Mais, Pague Menos) -->
+    <section id="kits" class="py-16 bg-gradient-to-b from-white to-pink-50/50 border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 space-y-8">
+            
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="bg-pink-100 text-pink-700 font-fredoka text-xs px-3.5 py-1.5 rounded-full font-bold uppercase tracking-wider">
+                    🎁 Economia Múltipla
+                </span>
+                <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-slate-900 mt-2">
+                    Leve Mais, Pague Menos: Kits Especiais
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    Combine caixas temáticas para garantir o presente perfeito com descontos exclusivos e frete grátis!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto pt-4">
+                
+                <!-- Kit 1: Duo Festas -->
+                <div class="trust-card rounded-3xl overflow-hidden flex flex-col justify-between border-2 border-pink-400 hover:shadow-2xl transition group relative bg-white">
+                    <span class="absolute top-3 right-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-fredoka text-xs font-bold px-3 py-1 rounded-full shadow-md z-10 uppercase">
+                        ECONOMIZE R$ 29,90!
+                    </span>
+
+                    <div class="relative bg-pink-50/40 p-6 flex items-center justify-center h-60 border-b border-pink-100 overflow-hidden">
+                        <img src="/images/squishy-box.png" alt="Combo Festas Halloween + Natal" class="h-full object-contain group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+
+                    <div class="p-6 space-y-4 flex-grow flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <h3 class="font-fredoka font-bold text-2xl text-slate-900 group-hover:text-pink-600 transition">
+                                Combo Festas (Halloween + Natal)
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                O melhor dos dois mundos! 1 Box de Halloween (13 peças) + 1 Box Natalino (24 peças) para completar a coleção das festas de fim de ano.
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-pink-100 space-y-3">
+                            <div class="flex items-baseline space-x-2">
+                                <span class="text-sm text-slate-400 line-through">De R$ 259,80</span>
+                                <span class="font-fredoka text-3xl font-bold text-pink-600">Por R$ 229,90</span>
+                            </div>
+
+                            <a href="produto.html?id=combo-festas" class="w-full gradient-button text-white font-fredoka py-3.5 px-4 rounded-2xl text-center font-bold text-base block transition shadow-md">
+                                LEVAR COMBO FESTAS
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kit 2: Kit Master Collector -->
+                <div class="trust-card rounded-3xl overflow-hidden flex flex-col justify-between hover:shadow-2xl transition group relative bg-white">
+                    <span class="absolute top-3 right-3 bg-blue-600 text-white font-fredoka text-xs font-bold px-3 py-1 rounded-full shadow-md z-10 uppercase">
+                        MELHOR OFERTA + FRETE GRÁTIS
+                    </span>
+
+                    <div class="relative bg-purple-50/40 p-6 flex items-center justify-center h-60 border-b border-purple-100 overflow-hidden">
+                        <img src="/images/squishy-box.png" alt="Kit Master Collector 3 Boxes" class="h-full object-contain group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+
+                    <div class="p-6 space-y-4 flex-grow flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <h3 class="font-fredoka font-bold text-2xl text-slate-900 group-hover:text-purple-600 transition">
+                                Kit Master Collector (3 Boxes)
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Para os verdadeiros fãs! Escolha 3 caixas da loja (Dumpling, Halloween, Natal ou Mystery) com a máxima economia.
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-100 space-y-3">
+                            <div class="flex items-baseline space-x-2">
+                                <span class="text-sm text-slate-400 line-through">De R$ 389,70</span>
+                                <span class="font-fredoka text-3xl font-bold text-slate-900">Por R$ 329,90</span>
+                            </div>
+
+                            <a href="produto.html?id=master-collector" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-fredoka py-3.5 px-4 rounded-2xl text-center font-bold text-base block transition shadow-xs">
+                                GARANTIR SUPER KIT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE PRODUTOS INDIVIDUAIS (R$ 129,90 cada) -->
+    <section id="produtos" class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 space-y-8">
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-4">
+                <div>
+                    <span class="bg-purple-100 text-purple-700 font-fredoka text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider">Catálogo Individual</span>
+                    <h2 class="font-fredoka text-2xl sm:text-4xl font-bold text-slate-900 mt-2">Escolha a sua Squishy Box Favorita</h2>
+                </div>
+            </div>
+
+            <!-- Grid de Produtos Individuais (5 itens) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Produto 1: Box 24 Dumplings -->
+                <div class="trust-card rounded-3xl overflow-hidden flex flex-col justify-between hover:shadow-xl transition group">
+                    <div class="relative bg-slate-50 p-6 flex items-center justify-center h-64 border-b border-slate-100 overflow-hidden">
+                        <span class="absolute top-3 left-3 bg-amber-500 text-white font-fredoka text-[10px] font-bold px-3 py-1 rounded-full z-10 uppercase">
+                            BEST-SELLER
+                        </span>
+                        <img src="/images/squishy-box.png" alt="Box 24 Dumplings Clássicos" class="h-full object-contain group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+
+                    <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <h3 class="font-fredoka font-bold text-lg text-slate-900 group-hover:text-pink-600 transition">
+                                Box 24 Dumpling Squishies
+                            </h3>
+                            <p class="text-xs text-slate-500 line-clamp-2">
+                                Caixinha clássica com 24 mini dumplings em formato de baozi com diversas expressões fofas e textura ultra suave.
+                            </p>
+                        </div>
+
+                        <div class="pt-3 border-t border-slate-100 space-y-3">
+                            <div class="flex items-baseline space-x-2">
+                                <span class="font-fredoka text-2xl font-bold text-slate-900">R$ 129,90</span>
+                            </div>
+
+                            <a href="produto.html?id=box-dumplings" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-fredoka py-3 px-4 rounded-2xl text-center font-bold text-sm block transition">
+                                COMPRAR AGORA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 2: Box Halloween -->
+                <div class="trust-card rounded-3xl overflow-hidden flex flex-col justify-between hover:shadow-xl transition group">
+                    <div class="relative bg-slate-50 p-6 flex items-center justify-center h-64 border-b border-slate-100 overflow-hidden">
+                        <span class="absolute top-3 left-3 bg-purple-600 text-white font-fredoka text-[10px] font-bold px-3 py-1 rounded-full z-10 uppercase">
+                            EDIÇÃO LIMITADA
+                        </span>
+                        <img src="/images/squishy-box.png" alt="Box Halloween 13 Peças" class="h-full object-contain group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+
+                    <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <h3 class="font-fredoka font-bold text-lg text-slate-900 group-hover:text-purple-600 transition">
+                                Box Halloween (13 peças)
+                            </h3>
+                            <p class="text-xs text-slate-500 line-clamp-2">
+                                Kit temático arrepiante com 13 squishies decorativos e divertidos (abóboras, fantasminhas, morcegos e mais).
+                            </p>
+                        </div>
+
+                        <div class="pt-3 border-t border-slate-100 space-y-3">
+                            <div class="flex items-baseline space-x-2">
+                                <span class="font-fredoka text-2xl font-bold text-slate-900">R$ 129,90</span>
+                            </div>
+
+                            <a href="produto.html?id=box-halloween" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-fredoka py-3 px-4 rounded-2xl text-center font-bold text-sm block transition">
+                                COMPRAR AGORA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 3: Box Natalino 1 -->
+                <div class="trust-card rounded-3xl overflow-hidden flex flex-col justify-between hover:shadow-xl transition group">
+                    <div class="relative bg-slate-50 p-6 flex items-center justify-center h-64 border-b border-slate-100 overflow-hidden">
+                        <span class="absolute top-3 left-3 bg-emerald-600 text-white font-fredoka text-[10px] font-bold px-3 py-1 rounded-full z-10 uppercase">
+                            LANÇAMENTO NATAL
+                        </span>
+                        <img src="/images/squishy-box.png" alt="Box Natalino Edição 1" class="h-full object-contain group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+
+                    <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <h3 class="font-fredoka font-bold text-lg text-slate-900 group-hover:text-pink-600 transition">
+                                Box Natalino - Edição 1 (24 pcs)
+                            </h3>
+                            <p class="text-xs text-slate-500 line-clamp-2">
+                                A magia do Natal em 24 mini figuras festivas sortidas (Pai Natal, bonecos de neve, árvores decoradas e renas).
+                            </p>
+                        </div>
+
+                        <div class="pt-3 border-t border-slate-100 space-y-3">
+                            <div class="flex items-baseline space-x-2">
+                                <span class="font-fredoka text-2xl font-bold text-slate-900">R$ 129,90</span>
+                            </div>
+
+                            <a href="produto.html?id=box-natal-1" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-fredoka py-3 px-4 rounded-2xl text-center font-bold text-sm block transition">
+                                COMPRAR AGORA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 4: Box Natalino 2 -->
+                <div class="trust-card rounded-3xl overflow-hidden flex flex-col justify-between hover:shadow-xl transition group">
+                    <div class="relative bg-slate-50 p-6 flex items-center justify-center h-64 border-b border-slate-100 overflow-hidden">
+                        <span class="absolute top-3 left-3 bg-emerald-600 text-white font-fredoka text-[10px] font-bold px-3 py-1 rounded-full z-10 uppercase">
+                            LANÇAMENTO NATAL
+                        </span>
+                        <img src="/images/squishy-box.png" alt="Box Natalino Edição 2" class="h-full object-contain group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+
+                    <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <h3 class="font-fredoka font-bold text-lg text-slate-900 group-hover:text-pink-600 transition">
+                                Box Natalino - Edição 2 (24 pcs)
+                            </h3>
+                            <p class="text-xs text-slate-500 line-clamp-2">
+                                Segunda versão da coleção de Natal com 24 figuras complementares sem modelos repetidos para completar a coleção.
+                            </p>
+                        </div>
+
+                        <div class="pt-3 border-t border-slate-100 space-y-3">
+                            <div class="flex items-baseline space-x-2">
+                                <span class="font-fredoka text-2xl font-bold text-slate-900">R$ 129,90</span>
+                            </div>
+
+                            <a href="produto.html?id=box-natal-2" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-fredoka py-3 px-4 rounded-2xl text-center font-bold text-sm block transition">
+                                COMPRAR AGORA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 5: Box Mystery Dumpling -->
+                <div class="trust-card rounded-3xl overflow-hidden flex flex-col justify-between hover:shadow-xl transition group">
+                    <div class="relative bg-slate-50 p-6 flex items-center justify-center h-64 border-b border-slate-100 overflow-hidden">
+                        <span class="absolute top-3 left-3 bg-indigo-600 text-white font-fredoka text-[10px] font-bold px-3 py-1 rounded-full z-10 uppercase">
+                            MISTÉRIO SURPRESA
+                        </span>
+                        <img src="/images/squishy-box.png" alt="Box Mystery Dumpling 24 Peças" class="h-full object-contain group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+
+                    <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <h3 class="font-fredoka font-bold text-lg text-slate-900 group-hover:text-indigo-600 transition">
+                                Box Mystery Dumpling (24 pcs)
+                            </h3>
+                            <p class="text-xs text-slate-500 line-clamp-2">
+                                A emoção do unboxing! Caixa fechada com 24 embalagens misteriosas individuais para surpreender a cada abertura.
+                            </p>
+                        </div>
+
+                        <div class="pt-3 border-t border-slate-100 space-y-3">
+                            <div class="flex items-baseline space-x-2">
+                                <span class="font-fredoka text-2xl font-bold text-slate-900">R$ 129,90</span>
+                            </div>
+
+                            <a href="produto.html?id=box-mystery" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-fredoka py-3 px-4 rounded-2xl text-center font-bold text-sm block transition">
+                                COMPRAR AGORA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Garantia -->
+    <section class="py-14 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+        <div class="max-w-4xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
+            <div class="w-24 h-24 shrink-0 bg-white/10 rounded-3xl flex items-center justify-center text-amber-400 text-5xl border border-white/20">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="space-y-3">
+                <h3 class="font-fredoka text-2xl sm:text-3xl font-bold">Garantia Incondicional de 7 Dias</h3>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Experimente em casa por até 7 dias! Se por qualquer motivo não adorar a experiência da Squishy Box, devolvemos 100% do seu dinheiro sem complicações.
+                </p>
+                <div class="flex items-center justify-center md:justify-start space-x-2 text-xs font-semibold text-emerald-400">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Compra protegida pelo Código de Defesa do Consumidor.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="py-16 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-xl mx-auto space-y-2 mb-12">
+                <span class="text-pink-600 font-fredoka text-sm font-bold uppercase tracking-wider">Avaliações Reais</span>
+                <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-slate-900">Quem Compra, Recomenda!</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="trust-card p-6 rounded-2xl space-y-3">
+                    <div class="flex text-amber-400 text-xs space-x-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 italic">
+                        "Comprei o Combo Festas para o meu filho e ele adorou os bonequinhos de Natal e abóboras! Chegou em 4 dias aqui em SP."
+                    </p>
+                    <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <span class="font-bold text-slate-900">Mariana S. • SP</span>
+                        <span class="text-emerald-600 font-bold"><i class="fa-solid fa-circle-check"></i> Verificado</span>
+                    </div>
+                </div>
+
+                <div class="trust-card p-6 rounded-2xl space-y-3">
+                    <div class="flex text-amber-400 text-xs space-x-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 italic">
+                        "A caixa com 24 dumplings é perfeita demais! Muito macios e relaxing. Excelente para deixar na mesa de trabalho."
+                    </p>
+                    <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <span class="font-bold text-slate-900">Lucas M. • PR</span>
+                        <span class="text-emerald-600 font-bold"><i class="fa-solid fa-circle-check"></i> Verificado</span>
+                    </div>
+                </div>
+
+                <div class="trust-card p-6 rounded-2xl space-y-3">
+                    <div class="flex text-amber-400 text-xs space-x-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 italic">
+                        "Paguei via PIX com desconto e o rastreio chegou no mesmo dia no WhatsApp. Atendimento nota 10!"
+                    </p>
+                    <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <span class="font-bold text-slate-900">Camila R. • RJ</span>
+                        <span class="text-emerald-600 font-bold"><i class="fa-solid fa-circle-check"></i> Verificado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="text-center space-y-2 mb-10">
+                <span class="text-pink-600 font-fredoka text-sm font-bold uppercase tracking-wider">Tire Suas Dúvidas</span>
+                <h2 class="font-fredoka text-3xl font-bold text-slate-900">Perguntas Frequentes</h2>
+            </div>
+
+            <div class="space-y-4">
+                <details class="trust-card rounded-2xl p-4 cursor-pointer">
+                    <summary class="font-fredoka font-bold text-slate-900 text-base">Qual é o prazo de entrega da minha encomenda?</summary>
+                    <p class="mt-3 text-xs sm:text-sm text-slate-600 border-t border-slate-100 pt-3">
+                        O prazo médio para todo o Brasil varia de 4 a 9 dias úteis. Código de rastreio enviado automaticamente por e-mail e WhatsApp.
+                    </p>
+                </details>
+                <details class="trust-card rounded-2xl p-4 cursor-pointer">
+                    <summary class="font-fredoka font-bold text-slate-900 text-base">Os produtos são seguros para crianças?</summary>
+                    <p class="mt-3 text-xs sm:text-sm text-slate-600 border-t border-slate-100 pt-3">
+                        Sim! Produzidos com Silicone TPR atóxico, totalmente livres de BPA e laváveis com água e sabão neutro.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Corporativo -->
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 text-xs">
+        <div class="max-w-6xl mx-auto px-4 text-center space-y-4">
+            <div class="flex items-center justify-center space-x-2">
+                <div class="w-8 h-8 rounded-xl bg-pink-500 flex items-center justify-center text-white font-bold text-lg">✨</div>
+                <span class="font-fredoka text-xl text-white font-bold">Squishy Box Brasil</span>
+            </div>
+            <p>Atendimento ao Cliente via WhatsApp: <strong>(11) 92660-3848</strong></p>
+            <p>© 2026 Squishy Box Brasil. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
